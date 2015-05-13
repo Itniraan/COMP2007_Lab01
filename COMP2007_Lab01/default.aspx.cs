@@ -11,16 +11,18 @@ namespace COMP2007_Lab01
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            lblConfirmSkills.Text = "";
         }
 
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
             lblConfirmation.Visible = true;
-            lblConfimStudentName.Text = txtStudentName.Text;
-            lblConfimPassword.Text = txtPassword.Text;
-            lblConfirmAddress.Text = txtAddress.Text;
-            lblConfirmEducation.Text = rdoEducation.SelectedItem.Text;
+            lblConfimStudentName.Text = "Student Name: " + txtStudentName.Text;
+            lblConfimPassword.Text = "Password: " + txtPassword.Text;
+            lblConfirmAddress.Text = "Address: " + txtAddress.Text;
+            lblConfirmEducation.Text = "Education Level: " + rdoEducation.SelectedItem.Text;
+
+            // Check if checkbox is checked
             if (chkLaptop.Checked)
             {
                 lblConfirmLaptop.Text = "I have a laptop";
@@ -29,15 +31,18 @@ namespace COMP2007_Lab01
             {
                 lblConfirmLaptop.Text = "I do not have a laptop";
             }
+
+            // Loop through skills list, add each one that is checked to label
+            lblConfirmSkills.Text = "Skills: ";
             foreach (ListItem skills in cblSkillsList.Items)
             {
                 if (skills.Selected) 
                 {
-                    lblConfirmSkills.Text = skills.Text + " ";
+                    lblConfirmSkills.Text += skills.Text + " ";
                 }
             }
 
-            lblConfirmProvince.Text = ddlProv.SelectedItem.Text;
+            lblConfirmProvince.Text = "Province: " + ddlProv.SelectedItem.Text;
         }
     }
 }

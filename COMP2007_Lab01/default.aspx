@@ -1,10 +1,12 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="COMP2007_Lab01._default" %>
-
+<!-- Title: COMP2007 - Lab01 -->
+<!-- Date: Wednesday, May 13th, 2015 -->
+<!-- Author: Blake Murdock (200260568) -->
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>COMP2007 - Lab 01</title>
 </head>
 <body>
     <form id="inputForm" runat="server">
@@ -59,15 +61,29 @@
             </div>
         </fieldset>
     </form>
-
+    <br />
     <div>
         <asp:Label ID="lblConfirmation" runat="server" Text="Confirmation" Visible="false" Font-Size="Larger"></asp:Label>
+    </div>
+    <div>
         <asp:Label ID="lblConfimStudentName" runat="server"></asp:Label>
+    </div>
+    <div>
         <asp:Label ID="lblConfimPassword" runat="server"></asp:Label>
+    </div>
+    <div>
         <asp:Label ID="lblConfirmAddress" runat="server"></asp:Label>
+    </div>
+    <div>
         <asp:Label ID="lblConfirmEducation" runat="server"></asp:Label>
+    </div>
+    <div>
         <asp:Label ID="lblConfirmLaptop" runat="server"></asp:Label>
+    </div>
+    <div>
         <asp:Label ID="lblConfirmSkills" runat="server"></asp:Label>
+    </div>
+    <div>
         <asp:Label ID="lblConfirmProvince" runat="server"></asp:Label>
     </div>
 </body>
